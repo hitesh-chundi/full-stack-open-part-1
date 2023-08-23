@@ -10,6 +10,8 @@ const App = () => {
   const handleNeutral = () => setNeutral(neutral + 1);
   const handleBad = () => setBad(bad + 1);
 
+  const total = good + bad + neutral;
+
   return (
     <div>
       <Header text="Give Feedback" />
@@ -20,6 +22,9 @@ const App = () => {
       <Count text="Good" value={good} />
       <Count text="Neutral" value={neutral} />
       <Count text="Bad" value={bad} />
+      <Count text="All" value={total} />
+      <Count text="Average" value={(good - bad) / total} />
+      <Count text="Positive" value={String(good/total*100) + "%"} />
     </div>
   )
 }
