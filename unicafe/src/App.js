@@ -24,7 +24,7 @@ const App = () => {
       <Count text="Bad" value={bad} />
       <Count text="All" value={total} />
       <Count text="Average" value={(good - bad) / total} />
-      <Count text="Positive" value={String(good/total*100) + "%"} />
+      <Count text="Positive" value={String(good/total*100) + " %"} />
     </div>
   )
 }
